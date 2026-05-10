@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="DreamyCS2SDK.vcxproj" Id="3489adee-dbff-434c-9d2a-3477f1b94ab8" />
+</Solution>
