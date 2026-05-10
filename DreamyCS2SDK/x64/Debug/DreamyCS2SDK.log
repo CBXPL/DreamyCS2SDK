@@ -1,0 +1,60 @@
+﻿  AmbaEntry.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+G:\DreamyCS2SDK\AmbaEntry.cpp(170,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+G:\DreamyCS2SDK\deps\ImGui\imgui.cpp(2193,10): error C2006: '#include': expected "FILENAME" or <FILENAME>
+G:\DreamyCS2SDK\deps\ImGui\imgui.cpp(3023,9): warning C4005: 'va_copy': macro redefinition
+      G:\DreamyCS2SDK\deps\ImGui\imgui.cpp(3021,9):
+      see previous definition of 'va_copy'
+  
+G:\DreamyCS2SDK\deps\ImGui\imgui.cpp(18022,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+G:\DreamyCS2SDK\deps\ImGui\imgui_demo.cpp(190,9): warning C4005: 'IM_NEWLINE': macro redefinition
+      G:\DreamyCS2SDK\deps\ImGui\imgui_demo.cpp(188,9):
+      see previous definition of 'IM_NEWLINE'
+  
+G:\DreamyCS2SDK\deps\ImGui\imgui_demo.cpp(206,9): warning C4005: 'PRId64': macro redefinition
+      G:\DreamyCS2SDK\deps\ImGui\imgui_demo.cpp(203,9):
+      see previous definition of 'PRId64'
+  
+G:\DreamyCS2SDK\deps\ImGui\imgui_demo.cpp(207,9): warning C4005: 'PRIu64': macro redefinition
+      G:\DreamyCS2SDK\deps\ImGui\imgui_demo.cpp(204,9):
+      see previous definition of 'PRIu64'
+  
+G:\DreamyCS2SDK\deps\ImGui\imgui_demo.cpp(224,9): warning C4005: 'IMGUI_CDECL': macro redefinition
+      G:\DreamyCS2SDK\deps\ImGui\imgui_demo.cpp(222,9):
+      see previous definition of 'IMGUI_CDECL'
+  
+G:\DreamyCS2SDK\deps\ImGui\imgui_demo.cpp(10860,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+G:\DreamyCS2SDK\deps\ImGui\imgui_draw.cpp(131,10): error C2006: '#include': expected "FILENAME" or <FILENAME>
+G:\DreamyCS2SDK\deps\ImGui\imgui_draw.cpp(156,10): error C2006: '#include': expected "FILENAME" or <FILENAME>
+G:\DreamyCS2SDK\deps\ImGui\imgui_draw.cpp(6335,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+G:\DreamyCS2SDK\deps\ImGui\imgui_impl_dx11.cpp(680,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  imgui_impl_win32.cpp
+G:\DreamyCS2SDK\deps\ImGui\imgui_impl_win32.cpp(978,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  imgui_tables.cpp
+G:\DreamyCS2SDK\deps\ImGui\imgui_tables.cpp(4569,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  imgui_widgets.cpp
+G:\DreamyCS2SDK\deps\ImGui\imgui_widgets.cpp(10767,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  kiero.cpp
+G:\DreamyCS2SDK\deps\ImGui\kiero.cpp(40,10): warning C4005: 'KIERO_TEXT': macro redefinition
+      G:\DreamyCS2SDK\deps\ImGui\kiero.cpp(38,10):
+      see previous definition of 'KIERO_TEXT'
+  
+G:\DreamyCS2SDK\deps\ImGui\kiero.cpp(720,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Menu.cpp
+G:\DreamyCS2SDK\src\GUI\Menu.cpp(39,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Overlay.cpp
+G:\DreamyCS2SDK\src\GUI\Overlay.cpp(15,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  esp.cpp
+G:\DreamyCS2SDK\src\Features\esp.cpp(129,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  HookLib.cpp
+G:\DreamyCS2SDK\src\SDK\HookLib.cpp(80,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Hooks.cpp
+G:\DreamyCS2SDK\src\SDK\Hooks.cpp(78,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Interfaces.cpp
+G:\DreamyCS2SDK\src\SDK\Interfaces.cpp(64,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Offsets.cpp
+G:\DreamyCS2SDK\src\Offsets.cpp(34,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Generating Code...

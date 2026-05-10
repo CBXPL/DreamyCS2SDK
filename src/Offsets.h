@@ -45,13 +45,6 @@ namespace dreamy_offsets {
             constexpr std::ptrdiff_t dwViewAngles = 0x2340288;
             constexpr std::ptrdiff_t dwViewRender = 0x232FCD0;
             constexpr std::ptrdiff_t dwWeaponC4 = 0x22A8E38;
-        }
-        namespace matchmaking_dll {
-            constexpr std::ptrdiff_t dwGameTypes = 0x1B0F80;
-        }
-        namespace soundsystem_dll {
-            constexpr std::ptrdiff_t dwSoundSystem = 0x512360;
-            constexpr std::ptrdiff_t dwSoundSystem_engineViewData = 0x7C;
 
             namespace client_offsets {
                 constexpr std::ptrdiff_t m_hPlayerPawn = 0x90C;
@@ -65,7 +58,14 @@ namespace dreamy_offsets {
                 constexpr std::ptrdiff_t m_pBoneArray = 0x80; // CModelState (You got bone indexes on the top)
             }
         }
-    }
+        namespace matchmaking_dll {
+            constexpr std::ptrdiff_t dwGameTypes = 0x1B0F80;
+        }
+        namespace soundsystem_dll {
+            constexpr std::ptrdiff_t dwSoundSystem = 0x512360;
+            constexpr std::ptrdiff_t dwSoundSystem_engineViewData = 0x7C;
+            }
+        }
 
     void Initialize();
 

@@ -67,6 +67,7 @@ void ESP::Render()
     }
 
     using namespace dreamy_offsets::offsets;
+    using namespace client_dll;
 
     uintptr_t vmAddr = g_Client + client_dll::dwViewMatrix;
     memcpy(&g_ViewMatrix, (void*)vmAddr, sizeof(g_ViewMatrix));
@@ -77,7 +78,7 @@ void ESP::Render()
     uintptr_t localController = *(uintptr_t*)(g_Client + client_dll::dwLocalPlayerController);
     if (!localController || localController < 0x1000000) return;
 
-    uint32_t localHandle = *(uint32_t*)(localController + soundsystem_dll::client_offsets::m_hPlayerPawn);
+    uint32_t localHandle = *(uint32_t*)(localController + client_offsets::m_hPlayerPawn);
     bool localValid = (localHandle != 0 && localHandle != 0xFFFFFFFF);
 
     uintptr_t localPawn = 0;
@@ -87,7 +88,7 @@ void ESP::Render()
         if (entry) {
             localPawn = *(uintptr_t*)(entry + 0x70 * (localHandle & 0x1FF));
             if (localPawn && localPawn >= 0x1000000)
-                localTeam = (int) * (uint8_t*)(localPawn + soundsystem_dll::client_offsets::m_iTeamNum);
+                localTeam = (int) * (uint8_t*)(localPawn + client_offsets::m_iTeamNum);
         }
     }
 
@@ -99,7 +100,7 @@ void ESP::Render()
         uintptr_t controller = *(uintptr_t*)(listEntry + 0x70 * (i & 0x1FF));
         if (!controller || controller < 0x1000000) continue;
 
-        uint32_t pawnHandle = *(uint32_t*)(controller + soundsystem_dll::client_offsets::m_hPlayerPawn);
+        uint32_t pawnHandle = *(uint32_t*)(controller + client_offsets::m_hPlayerPawn);
         if (pawnHandle == 0 || pawnHandle == 0xFFFFFFFF) continue;
         if (localValid && pawnHandle == localHandle) continue;
 
@@ -109,13 +110,13 @@ void ESP::Render()
         uintptr_t pawn = *(uintptr_t*)(pawnEntry + 0x70 * (pawnHandle & 0x1FF));
         if (!pawn || pawn < 0x1000000) continue;
 
-        int team = (int) * (uint8_t*)(pawn + soundsystem_dll::client_offsets::m_iTeamNum);
+        int team = (int) * (uint8_t*)(pawn + client_offsets::m_iTeamNum);
         if (team != 2 && team != 3) continue;
 
-        int health = *(int*)(pawn + soundsystem_dll::client_offsets::m_iHealth);
+        int health = *(int*)(pawn + client_offsets::m_iHealth);
         if (health <= 0 || health > 100) continue;
 
-        Vector3 origin = *(Vector3*)(pawn + soundsystem_dll::client_offsets::m_vOldOrigin);
+        Vector3 origin = *(Vector3*)(pawn + client_offsets::m_vOldOrigin);
 
         uint32_t color;
         if (team == localTeam)
