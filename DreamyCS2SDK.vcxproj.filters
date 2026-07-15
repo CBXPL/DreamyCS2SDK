@@ -87,6 +87,9 @@
     <ClInclude Include="src\Obfuscation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\SDK\UserCMD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="deps\ImGui\imgui.cpp">

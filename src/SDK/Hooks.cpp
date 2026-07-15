@@ -9,6 +9,13 @@
 typedef __int64(__fastcall* DrawScope_t)(__int64 int1, __int64 int2);
 DrawScope_t oDrawScope = nullptr;
 
+typedef bool(__fastcall* DrawCrosshair_t)(uintptr_t a1);
+DrawCrosshair_t oDrawCrosshair = nullptr;
+
+struct CCSGOInput;
+typedef bool(__fastcall* CreateMove_t)(CCSGOInput* pInput, uint32_t splitscreenindex, char a3);
+CreateMove_t oCreateMove = nullptr;
+
 // You can use this hook if you want to implement scope overlay removal :D
 // To do this you can basically replace the original function body to just return;
 // Example:
@@ -21,10 +28,6 @@ __int64 __fastcall hkDrawScope(__int64 int1, __int64 int2)
     return oDrawScope(int1, int2);
 }
 
-
-typedef bool(__fastcall* DrawCrosshair_t)(uintptr_t a1);
-DrawCrosshair_t oDrawCrosshair = nullptr;
-
 // You can use this hook to create crosshair removal or force crosshair
 // To do this you just replace original function to return true or false;
 // Example:
@@ -36,6 +39,18 @@ DrawCrosshair_t oDrawCrosshair = nullptr;
 bool __fastcall hkDrawCrosshair(uintptr_t a1)
 {
     return oDrawCrosshair(a1);
+}
+
+// You can use this hook to manipulate ingame input, use structs from UserCMD.h, for manipulating cmdPB input you also need GetUserCMD patterns.
+bool __fastcall hkCreateMove(CCSGOInput* pInput, uint32_t splitscreenindex, char a3)
+{
+    bool Result = false;
+    if (oCreateMove)
+        Result = oCreateMove(pInput, splitscreenindex, a3);
+
+    if (!pInput) return Result;
+
+    return Result;
 }
 
 void Hooks::Initialize()
@@ -68,6 +83,19 @@ void Hooks::Initialize()
     else
     {
         std::cout << XorStr("[ERROR] Failed to hook hkDrawCrosshair!") << std::endl;
+    }
+   
+    result = HookLib::Hook(XorStr("client.dll"), XorStr("85 D2 0F 85 ? ? ? ? 48 8B C4 44 88 40 18"),
+        hkCreateMove, (void**)&oCreateMove);
+    if (result)
+    {
+        uintptr_t modBase = (uintptr_t)GetModuleHandleA(XorStr("client.dll"));
+        std::cout << XorStr("[Hooks] Hooked hkCreateMove at RVA: 0x")
+            << std::hex << (uint64_t)((uintptr_t)oCreateMove - modBase) << std::dec << std::endl;
+    }
+    else
+    {
+        std::cout << XorStr("[ERROR] Failed to hook hkCreateMove!") << std::endl;
     }
 }
 

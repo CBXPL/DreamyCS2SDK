@@ -164,6 +164,7 @@
     <ClInclude Include="src\GUI\Overlay.h" />
     <ClInclude Include="src\Offsets.h" />
     <ClInclude Include="src\Features\esp.h" />
+    <ClInclude Include="src\SDK\UserCMD.h" />
     <ClInclude Include="src\Variables.h" />
     <ClInclude Include="src\SDK\HookLib.h" />
     <ClInclude Include="src\SDK\Hooks.h" />
