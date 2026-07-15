@@ -37,24 +37,24 @@ namespace dreamy_offsets {
             inline std::ptrdiff_t dwViewMatrix = 0; // Resolved via sigscan
             inline std::ptrdiff_t dwLocalPlayerController = 0; // Resolved via sigscan
 
-            constexpr std::ptrdiff_t dwGameEntitySystem = 0x24D0DC0;
+            constexpr std::ptrdiff_t dwGameEntitySystem = 0x254EE60;
             constexpr std::ptrdiff_t dwGameEntitySystem_highestEntityIndex = 0x2090;
             constexpr std::ptrdiff_t dwGlowManager = 0x2327D40;
-            constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x2056700;
-            constexpr std::ptrdiff_t dwPlantedC4 = 0x2338A68;
-            constexpr std::ptrdiff_t dwViewAngles = 0x2340288;
-            constexpr std::ptrdiff_t dwViewRender = 0x232FCD0;
-            constexpr std::ptrdiff_t dwWeaponC4 = 0x22A8E38;
+            constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x23A4238;
+            constexpr std::ptrdiff_t dwPlantedC4 = 0x236E678;
+            constexpr std::ptrdiff_t dwViewAngles = 0x23B9C78;
+            constexpr std::ptrdiff_t dwViewRender = 0x23A9398;
+            constexpr std::ptrdiff_t dwWeaponC4 = 0x231C9D0;
 
             namespace client_offsets {
-                constexpr std::ptrdiff_t m_hPlayerPawn = 0x90C;
-                constexpr std::ptrdiff_t m_vOldOrigin = 0x1390;
+                constexpr std::ptrdiff_t m_hPlayerPawn = 0x914;
+                constexpr std::ptrdiff_t m_vOldOrigin = 0x13B8;
                 constexpr std::ptrdiff_t m_iHealth = 0x34C;
-                constexpr std::ptrdiff_t m_iTeamNum = 0x3EB;
+                constexpr std::ptrdiff_t m_iTeamNum = 0x3E7;
 
                 // Skeleton
                 constexpr std::ptrdiff_t m_pGameSceneNode = 0x330; // CGameSceneNode*
-                constexpr std::ptrdiff_t m_modelState = 0x150; // CModelState
+                constexpr std::ptrdiff_t m_modelState = 0x140; // CModelState
                 constexpr std::ptrdiff_t m_pBoneArray = 0x80; // CModelState (You got bone indexes on the top)
             }
         }

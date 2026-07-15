@@ -9,6 +9,6 @@ void Overlay::Watermark()
         ImGui::GetFont(), 18.0f,
         ImVec2(15, 10),
         ImColor(0, 255, 200),
-        XorStr("DreamySDK v0.1")
+        XorStr("DreamySDK v0.1.1")
     );
 }
